@@ -171,11 +171,11 @@ def get_bot_response():
         answer = 0
     if(answer == 0):
         if(userText not in hi and userText not in start and question =='' or question == 'undefined'):
-            return ['error','Sorry I could not understand that, let`s start again...Hi I am zozo']
+            return ['error','Sorry I could not understand that, let`s start again...Hi I am zozo Type Start to start our conversation.']
         if(userText not in hi and userText not in start):
             print("i am inside")
             v = int(question)
-            return ['error','To start your career counseling session please enter start!* Do remember that the answers to the upcoming questions should be given in the form of yes(y), no(n), maybe(m), maybe not(mn), and don`t know(dk)', questions[v]]
+            return ['error','You typed something wrong!!* Do remember that the answers to the upcoming questions should be given in the form of yes(y), no(n), maybe(m), maybe not(mn), and don`t know(dk)', questions[v]]
         
 
         # if(userText not in )

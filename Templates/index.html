@@ -31,8 +31,9 @@
           </div>
 
           <div class="msg-text">
-            Hi, I am ZOZO! your Career guidance Chatbot 😄
-            <!-- {{question_text}} -->
+            <b>Do remember that the answers to the upcoming questions should be given in the form of yes(y), no(n),
+              maybe(m), maybe not(mn), and don`t know(dk) </b>
+            <p> Type <b>Start!</b> to start your conversation...</p>
           </div>
           <div class="msg-text-2">
             {{question_text}}
@@ -66,22 +67,22 @@
 
     msgerForm.addEventListener("submit", event => {
       event.preventDefault();
-      const hi = ['Hi', "hi"];
+      // const hi = ['Hi', "hi"];
       const start = ['start', 'Start'];
       let val = 0;
       const msgText = msgerInput.value;
       const qnum = question.value
       console.log("val og question",qnum)
       if (!msgText) return;
-          hi.forEach(element => {
-          if(element === msgText){
-            appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
-            appendMessage("Chatbot", PERSON_IMG, "left", "Hey there if you are ready for your career guidance, type Start!");
-            msgerInput.value = "";
-            ++val;
-            return;
-          }
-        });
+        //   hi.forEach(element => {
+        //   if(element === msgText){
+        //     appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
+        //     appendMessage("Chatbot", PERSON_IMG, "left", "Hey there if you are ready for your career guidance, type Start!");
+        //     msgerInput.value = "";
+        //     ++val;
+        //     return;
+        //   }
+        // });
         start.forEach(el =>{
           if(msgText === el){
             appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
@@ -142,7 +143,6 @@
               appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
               msgText = data[2]
               if(data[2] != undefined){
-                
                 appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
               }
             }else{
